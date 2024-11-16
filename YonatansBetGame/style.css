@@ -1,0 +1,54 @@
+/* General styling for the circular progress bar */
+.circular-progress {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.circular-progress svg {
+    transform: rotate(-90deg);
+}
+
+.circular-progress circle {
+    fill: none;
+    stroke-width: 10;
+}
+
+.circular-progress .bg {
+    stroke: #4a5568;
+}
+
+.circular-progress .progress {
+    stroke: #805ad5;
+    stroke-linecap: round;
+    stroke-dasharray: 440; /* 2 * PI * 70 */
+    stroke-dashoffset: 440;
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.circular-progress .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+
+.circular-progress .label {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #a0aec0;
+}
+
+/* Hover animations for buttons */
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(128, 90, 213, 0.4);
+}
+
+.button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
